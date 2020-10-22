@@ -5,6 +5,7 @@
   "author": "Rishi Nath <rishi.nath@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "global": "^4.4.0",
     "js-yaml": "^3.14.0",
     "prompt-sync": "^4.2.0"
   }

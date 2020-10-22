@@ -62,10 +62,19 @@ const interpolator = (time, fps, starting_cmd, ending_cmd) => {
 }
 
 while(true) {
-	interpolator(prompt('How long is the animation in seconds?'),
-				 prompt('How many frames per second?'),
-				 prompt('What is the starting pose?'),
-				 prompt('What is the ending pose?'),
-	)
+	try {
+		interpolator(prompt('How long is the animation in seconds?'),
+				     prompt('How many frames per second?'),
+				     prompt('What is the starting pose?'),
+				     prompt('What is the ending pose?'),
+		)
+	} catch (e) {
+		console.error(e)
+		console.log('Could not parse input. Please try again!')
+	}
+
+	if (prompt('Press (q) to quit or enter to continue...') == 'q') {
+		break
+	}
 }
 	
